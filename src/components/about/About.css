@@ -1,0 +1,159 @@
+.about__container {
+  margin: 2% 5%;
+  display: grid;
+  grid-template-columns: 35% 50%;
+  gap: 15%;
+  place-items: center;
+}
+
+.about__myself {
+  width: 325px;
+  height: 280px;
+  /* aspect-ratio: 1 / 1; */
+  border-radius: 2rem;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    var(--color-primary),
+    transparent
+  );
+
+  /* display: grid; */
+  /* place-items: center; */
+}
+
+.about__myself > img {
+  border-radius: 2rem;
+  overflow: hidden;
+  transform: rotate(10deg);
+  transition: var(--transition-all);
+}
+
+.about__myself > img:hover {
+  transform: rotate(0deg);
+}
+
+.about__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.about__card {
+  background: var(--color-bg-variant);
+  border: 1px solid transparent;
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: var(--transition-all);
+}
+
+.about__card:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
+}
+
+.about__card_icon {
+  columns: var(--color-primary);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about__card h5 {
+  font-size: 1rem;
+}
+
+.about__card small {
+  font-size: 0.8rem;
+  color: var(--color-light);
+}
+
+.about__content p {
+  margin: 2rem 0 2.6rem 0;
+  color: var(--color-light);
+}
+
+.about-btn {
+  /* margin-top: 5rem; */
+  margin-left: 85%;
+}
+
+.about__skills {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin-bottom: 3rem; */
+}
+
+.about__skills li {
+  display: flex;
+  padding: 0.4rem 0.8rem;
+  margin: 0.25rem 0.5rem;
+  background: var(--color-bg-variant);
+  border-radius: 1rem;
+}
+
+/* Media Query for Devices having Medium Screen Size like tablet*/
+@media screen and (max-width: 1024px) {
+  .about__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10%;
+    height: fit-content;
+  }
+
+  .about__myself {
+    width: 60%;
+    margin: 4rem 2rem;
+  }
+  .about__content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .about__cards {
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem 2rem;
+  }
+
+  .about__cards_para {
+    margin: 1ref 2rem;
+    text-align: justify;
+  }
+
+  .about-btn {
+    justify-content: center;
+    margin: 3rem auto;
+  }
+}
+
+/* Media Query for Devices having Small Screen Size like Mobile*/
+@media screen and (max-width: 600px) {
+  .about__container {
+    grid-template-columns: 1fr;
+    gap: 5%;
+  }
+
+  .about__myself {
+    width: 75%;
+    height: 83%;
+    margin: 0 auto 3rem;
+  }
+
+  .about__cards {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .about__content {
+    text-align: justify;
+  }
+
+  .about-btn {
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+    justify-self: center;
+    margin: 2.5rem 0;
+  }
+}
